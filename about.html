@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>О нас — Вкусные Истории</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f1ec;
+      color: #4e392f;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: #f8f5f1;
+      border-bottom: 1px solid #eee2d9;
+    }
+
+    .header-content {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      font-weight: 600;
+      color: #6a4a3a;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo span {
+      color: #58705e;
+    }
+
+    nav {
+      display: flex;
+      gap: 42px;
+      font-size: 18px;
+      color: #3f3029;
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 24px;
+    }
+
+    main {
+      padding: 48px 0 70px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e8d8cc;
+      border-radius: 34px;
+      box-shadow: 0 2px 8px rgba(82, 57, 45, 0.04);
+    }
+
+    .hero {
+      max-width: 860px;
+      margin: 0 auto 72px;
+      text-align: center;
+      padding: 52px 70px;
+    }
+
+    .hero h1,
+    .section-title,
+    .faq h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: #4e392f;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      margin-bottom: 28px;
+    }
+
+    .hero p {
+      font-size: 24px;
+      color: #8c776b;
+      line-height: 1.8;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 50px;
+      margin-bottom: 42px;
+    }
+
+    .advantages {
+      margin-bottom: 72px;
+    }
+
+    .advantages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .advantage-card {
+      padding: 38px 28px;
+      text-align: center;
+      min-height: 280px;
+    }
+
+    .icon-circle {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: #f4e7dc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 26px;
+      font-size: 34px;
+    }
+
+    .advantage-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: #3e2f28;
+    }
+
+    .advantage-card p {
+      font-size: 16px;
+      color: #8d796d;
+      line-height: 1.7;
+    }
+
+    .faq {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 44px;
+    }
+
+    .faq h2 {
+      text-align: center;
+      font-size: 50px;
+      margin-bottom: 34px;
+    }
+
+    .faq-item {
+      padding: 26px 0;
+      border-bottom: 1px solid #eaded4;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #3f2f28;
+    }
+
+    .faq-question span {
+      color: #c47347;
+      font-size: 20px;
+    }
+
+    .faq-answer {
+      padding-left: 32px;
+      font-size: 17px;
+      color: #8a7669;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 992px) {
+      .hero h1,
+      .section-title,
+      .faq h2 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 20px;
+      }
+
+      .advantages-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        gap: 22px;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        justify-content: center;
+        gap: 14px;
+        height: auto;
+        padding: 18px 0;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 40px 24px;
+      }
+
+      .hero h1,
+      .section-title,
+      .faq h2 {
+        font-size: 34px;
+      }
+
+      .hero p,
+      .faq-answer {
+        font-size: 16px;
+      }
+
+      .faq {
+        padding: 36px 24px;
+      }
+    }
+  </style> 
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+        <div class="logo">
+            <a href="#">🍳 Вкусные<span>Истории</span></a>
+        </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="recipes.html">Рецепты</a></li>
+                    <li><a href="#">Категории</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+    <div class="header-icons">
+        <a href="#" class="search-icon">🔍</a>
+        <a href="#" class="user-icon">👤</a>
+    </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero card">
+        <h1>О проекте «Вкусные Истории»</h1>
+        <p>
+          Мы создали платформу, которая объединяет любителей кулинарии со всего мира.
+          Здесь каждый может найти вдохновение, сохранить любимые рецепты и поделиться
+          своими кулинарными шедеврами. Наша цель — сделать процесс приготовления еды
+          простым, увлекательным и доступным для каждого.
+        </p>
+      </section>
+
+      <section class="advantages">
+        <h2 class="section-title">Наши преимущества</h2>
+
+        <div class="advantages-grid">
+          <div class="advantage-card card">
+            <div class="icon-circle">📔</div>
+            <h3>Тысячи рецептов</h3>
+            <p>
+              Огромная база проверенных рецептов на любой вкус и случай.
+            </p>
+          </div>
+
+          <div class="advantage-card card">
+            <div class="icon-circle">👥</div>
+            <h3>Активное комьюнити</h3>
+            <p>
+              Общайтесь, оценивайте и комментируйте рецепты других авторов.
+            </p>
+          </div>
+
+          <div class="advantage-card card">
+            <div class="icon-circle">👨‍🍳</div>
+            <h3>Советы от шефов</h3>
+            <p>
+              Уникальные лайфхаки и секреты приготовления от профессионалов.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq card">
+        <h2>Частые вопросы</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>❓</span>
+            <p>Как добавить свой рецепт?</p>
+          </div>
+          <div class="faq-answer">
+            Вам нужно зарегистрироваться, после чего в личном кабинете появится кнопка «Создать рецепт».
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>❓</span>
+            <p>Это бесплатно?</p>
+          </div>
+          <div class="faq-answer">
+            Да, базовый функционал портала полностью бесплатен для всех пользователей.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>❓</span>
+            <p>Можно ли сохранить рецепт в PDF?</p>
+          </div>
+          <div class="faq-answer">
+            Эта функция доступна зарегистрированным пользователям на странице каждого рецепта.
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+      <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">🍳 ВкусныеИстории</div>
+                <p>Рецепты для всей семьи с душой и любовью. Готовьте вкусно каждый день!</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Рецепты</a></li>
+                    <li><a href="#">Категории</a></li>
+                    <li><a href="#">Блог</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Информация</h4>
+                <ul>
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Реклама</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Соцсети</h4>
+                <div class="social-links">
+                    <a href="#">📘</a>
+                    <a href="#">📷</a>
+                    <a href="#">🐦</a>
+                    <a href="#">📌</a>
+                </div>
+                <p class="copyright">© 2025 ВкусныеИстории. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

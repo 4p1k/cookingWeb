@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вкусные истории | Кулинарный сайт</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#">🍳 Вкусные<span>Истории</span></a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="recipes.html">Рецепты</a></li>
+                    <li><a href="#">Категории</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" class="search-icon">🔍</a>
+                <a href="#" class="user-icon">👤</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент: сетка рецептов и боковая панель -->
+    <main class="main-content">
+        <div class="container main-grid">
+            <!-- Блок с рецептами (основной) -->
+            <section class="recipes">
+                <h1 class="section-title">Свежие рецепты</h1>
+                
+                <div class="recipe-grid">
+                    <!-- Карточка рецепта 1 -->
+                    <article class="recipe-card">
+                        <div class="recipe-img">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Салат с киноа и овощами">
+                            <span class="badge">Новинка</span>
+                        </div>
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Салат с киноа и авокадо</h3>
+                            <p class="recipe-desc">Лёгкий и полезный салат с киноа, авокадо и свежими овощами.</p>
+                            <div class="recipe-meta">
+                                <span class="time">⏱ 25 мин</span>
+                                <span class="difficulty easy">легко</span>
+                            </div>
+                            <a href="#" class="btn-recipe">Смотреть рецепт →</a>
+                        </div>
+                    </article>
+
+                    <!-- Карточка рецепта 2 -->
+                    <article class="recipe-card">
+                        <div class="recipe-img">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Пицца Маргарита">
+                        </div>
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Пицца Маргарита</h3>
+                            <p class="recipe-desc">Классическая итальянская пицца с соусом, моцареллой и базиликом.</p>
+                            <div class="recipe-meta">
+                                <span class="time">⏱ 40 мин</span>
+                                <span class="difficulty medium">средне</span>
+                            </div>
+                            <a href="#" class="btn-recipe">Смотреть рецепт →</a>
+                        </div>
+                    </article>
+
+                    <!-- Карточка рецепта 3 -->
+                    <article class="recipe-card">
+                        <div class="recipe-img">
+                            <img src="https://images.unsplash.com/photo-1608897013039-887f21d8c804?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Паста Карбонара">
+                            <span class="badge hot">🔥 Горячее</span>
+                        </div>
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Паста Карбонара</h3>
+                            <p class="recipe-desc">Спагетти с беконом в нежном сливочно-яичном соусе.</p>
+                            <div class="recipe-meta">
+                                <span class="time">⏱ 30 мин</span>
+                                <span class="difficulty medium">средне</span>
+                            </div>
+                            <a href="#" class="btn-recipe">Смотреть рецепт →</a>
+                        </div>
+                    </article>
+
+                    <!-- Карточка рецепта 4 -->
+                    <article class="recipe-card">
+                        <div class="recipe-img">
+                            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Шоколадный брауни">
+                        </div>
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Шоколадный брауни</h3>
+                            <p class="recipe-desc">Американский десерт с хрустящей корочкой и влажной серединкой.</p>
+                            <div class="recipe-meta">
+                                <span class="time">⏱ 45 мин</span>
+                                <span class="difficulty easy">легко</span>
+                            </div>
+                            <a href="#" class="btn-recipe">Смотреть рецепт →</a>
+                        </div>
+                    </article>
+
+                    <!-- Карточка рецепта 5 -->
+                    <article class="recipe-card">
+                        <div class="recipe-img">
+                            <img src="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Тыквенный суп">
+                        </div>
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Тыквенный суп-пюре</h3>
+                            <p class="recipe-desc">Нежный крем-суп из тыквы с имбирём и сливками.</p>
+                            <div class="recipe-meta">
+                                <span class="time">⏱ 35 мин</span>
+                                <span class="difficulty easy">легко</span>
+                            </div>
+                            <a href="#" class="btn-recipe">Смотреть рецепт →</a>
+                        </div>
+                    </article>
+
+                    <!-- Карточка рецепта 6 -->
+
+            </section>
+
+            <!-- Боковая панель (виджеты) -->
+            <aside class="sidebar">
+                <!-- Виджет: популярные рецепты -->
+                <div class="widget">
+                    <h3 class="widget-title">🍽 Популярное</h3>
+                    <ul class="popular-list">
+                        <li><a href="#">Борщ с пампушками</a> <span class="views">👁 12k</span></li>
+                        <li><a href="#">Цезарь с курицей</a> <span class="views">👁 9.8k</span></li>
+                        <li><a href="#">Сырники со сгущёнкой</a> <span class="views">👁 8.4k</span></li>
+                        <li><a href="#">Лазанья болоньезе</a> <span class="views">👁 7.2k</span></li>
+                        <li><a href="#">Овощное рагу</a> <span class="views">👁 6.5k</span></li>
+                    </ul>
+                </div>
+
+
+
+                <!-- Виджет: совет шефа -->
+                <div class="widget tip-widget">
+                    <h3 class="widget-title">👨‍🍳 Совет шефа</h3>
+                    <p>Чтобы лук при жарке приобрёл золотистый цвет, добавьте щепотку сахара. Карамелизация ускорится!</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">🍳 ВкусныеИстории</div>
+                <p>Рецепты для всей семьи с душой и любовью. Готовьте вкусно каждый день!</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Рецепты</a></li>
+                    <li><a href="#">Категории</a></li>
+                    <li><a href="#">Блог</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Информация</h4>
+                <ul>
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Реклама</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Соцсети</h4>
+                <div class="social-links">
+                    <a href="#">📘</a>
+                    <a href="#">📷</a>
+                    <a href="#">🐦</a>
+                    <a href="#">📌</a>
+                </div>
+                <p class="copyright">© 2025 ВкусныеИстории. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

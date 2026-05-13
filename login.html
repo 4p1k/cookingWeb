@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Регистрация — Вкусные Истории</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f1ec;
+      color: #49362d;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #eee2d7;
+    }
+
+    .header-inner {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: #b2673f;
+    }
+
+    .logo span {
+      color: #58705f;
+    }
+
+    nav {
+      display: flex;
+      gap: 48px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #352923;
+    }
+    .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-list a {
+    font-weight: 500;
+    color: #3c2e26;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-list a:hover {
+    color: #c9774d;
+    border-bottom-color: #c9774d;
+}
+
+
+    .actions {
+      display: flex;
+      gap: 20px;
+      font-size: 24px;
+    }
+
+    main {
+      min-height: calc(100vh - 72px);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 110px;
+    }
+
+    .auth-card {
+      width: 100%;
+      max-width: 450px;
+      background: #ffffff;
+      border: 1px solid #e6d7ca;
+      border-radius: 36px;
+      box-shadow: 0 2px 6px rgba(66, 40, 28, 0.05);
+      padding: 44px 42px 36px;
+    }
+
+    .auth-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 54px;
+      font-weight: 600;
+      color: #4c362c;
+      margin-bottom: 14px;
+    }
+
+    .auth-subtitle {
+      text-align: center;
+      color: #9b8578;
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .form-group {
+      margin-bottom: 22px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #4b382f;
+    }
+
+    .form-control {
+      width: 100%;
+      height: 56px;
+      border: 1px solid #e5d6ca;
+      border-radius: 18px;
+      padding: 0 18px;
+      background: #fff;
+      font-size: 16px;
+      color: #4c362d;
+      outline: none;
+      transition: 0.2s ease;
+    }
+
+    .form-control::placeholder {
+      color: #a59286;
+    }
+
+    .form-control:focus {
+      border-color: #b46841;
+      box-shadow: 0 0 0 3px rgba(180, 104, 65, 0.08);
+    }
+
+    .submit-btn {
+      width: 100%;
+      height: 58px;
+      border: none;
+      border-radius: 18px;
+      background: #b16740;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      background: #9e5b38;
+    }
+
+    .bottom-text {
+      text-align: center;
+      margin-top: 38px;
+      font-size: 15px;
+      color: #9a8579;
+    }
+
+    .bottom-text a {
+      color: #b16740;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .header-inner {
+        flex-direction: column;
+        justify-content: center;
+        gap: 14px;
+        height: auto;
+        padding: 18px 0;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+      }
+
+      main {
+        padding-top: 50px;
+      }
+
+      .auth-card {
+        padding: 36px 24px;
+      }
+
+      .auth-title {
+        font-size: 42px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="#">🍳 Вкусные<span>Истории</span></a>
+      </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="recipes.html">Рецепты</a></li>
+                    <li><a href="#">Категории</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+      <div class="actions">
+        <span>⌕</span>
+        <span>◌</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="auth-card">
+      <h1 class="auth-title">Создать аккаунт</h1>
+
+      <p class="auth-subtitle">
+        Присоединяйтесь к нашему сообществу кулинаров
+      </p>
+
+      <form>
+        <div class="form-group">
+          <label>Имя пользователя</label>
+          <input type="text" class="form-control" placeholder="Введите ваш логин">
+        </div>
+
+        <div class="form-group">
+          <label>E-mail адрес</label>
+          <input type="email" class="form-control" placeholder="example@mail.com">
+        </div>
+
+        <div class="form-group">
+          <label>Пароль</label>
+          <input type="password" class="form-control" placeholder="Минимум 8 символов">
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Зарегистрироваться
+        </button>
+      </form>
+
+      <div class="bottom-text">
+        Уже есть аккаунт? <a href="#">Войти</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

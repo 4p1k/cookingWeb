@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Отзывы — Вкусные Истории</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f1ec;
+      color: #47352c;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #eee2d7;
+    }
+
+    .header-inner {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: #b06740;
+    }
+
+    .logo span {
+      color: #5c7562;
+    }
+
+    nav {
+      display: flex;
+      gap: 46px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #382b24;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+      font-size: 24px;
+      color: #382b24;
+    }
+
+    main {
+      padding: 56px 0 70px;
+    }
+
+    .page-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 68px;
+      font-weight: 600;
+      color: #49362d;
+      margin-bottom: 14px;
+    }
+
+    .page-subtitle {
+      text-align: center;
+      font-size: 22px;
+      color: #998477;
+      margin-bottom: 52px;
+    }
+
+    .reviews-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .review-card {
+      background: #ffffff;
+      border: 1px solid #e6d7ca;
+      border-radius: 34px;
+      padding: 32px;
+      box-shadow: 0 2px 6px rgba(71, 53, 44, 0.05);
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #b26740;
+    }
+
+    .review-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #3f3028;
+      margin-bottom: 4px;
+    }
+
+    .review-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #9b867a;
+    }
+
+    .stars {
+      color: #b26740;
+      letter-spacing: 1px;
+    }
+
+    .review-text {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #8e796d;
+      font-style: italic;
+    }
+
+    .more-btn {
+      display: block;
+      width: fit-content;
+      margin: 48px auto 0;
+      padding: 18px 34px;
+      border-radius: 18px;
+      background: #b16740;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 500;
+      transition: 0.2s ease;
+    }
+
+    .more-btn:hover {
+      background: #9d5b38;
+    }
+
+    @media (max-width: 992px) {
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page-title {
+        font-size: 52px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .header-inner {
+        flex-direction: column;
+        justify-content: center;
+        gap: 14px;
+        height: auto;
+        padding: 18px 0;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+      }
+
+      .page-title {
+        font-size: 42px;
+      }
+
+      .page-subtitle {
+        font-size: 18px;
+      }
+
+      .review-card {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="#">🍳 Вкусные<span>Истории</span></a>
+
+      </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="recipes.html">Рецепты</a></li>
+                    <li><a href="#">Категории</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+      </nav>
+
+      <div class="header-icons">
+        <span>⌕</span>
+        <span>◌</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1 class="page-title">Отзывы наших пользователей</h1>
+
+      <p class="page-subtitle">
+        Узнайте, что говорят люди о нашем кулинарном портале
+      </p>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-header">
+            <img class="avatar" src="https://i.pravatar.cc/100?img=32" alt="Анна Смирнова">
+
+            <div>
+              <div class="review-name">Анна Смирнова</div>
+              <div class="review-meta">
+                <span class="stars">☆☆☆☆☆</span>
+                <span>12 мая 2023</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="review-text">
+            "Отличный сайт! Нашла здесь идеальный рецепт лазаньи. Теперь готовлю её каждые выходные,
+            семья просто в восторге. Очень удобный поиск и красивые фотографии."
+          </p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <img class="avatar" src="https://i.pravatar.cc/100?img=12" alt="Дмитрий Коваль">
+
+            <div>
+              <div class="review-name">Дмитрий Коваль</div>
+              <div class="review-meta">
+                <span class="stars">☆☆☆☆☆</span>
+                <span>3 апреля 2023</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="review-text">
+            "Нравится раздел с советами от шефа. Много мелких хитростей, которые реально работают.
+            Например, лайфхак с карамелизацией лука — просто супер!"
+          </p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <img class="avatar" src="https://i.pravatar.cc/100?img=47" alt="Елена Иванова">
+
+            <div>
+              <div class="review-name">Елена Иванова</div>
+              <div class="review-meta">
+                <span class="stars">☆☆☆☆☆</span>
+                <span>28 февраля 2023</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="review-text">
+            "Хороший ресурс для вдохновения. Иногда не знаешь, что приготовить на ужин,
+            заходишь сюда — и сразу куча идей. Хотелось бы только больше рецептов для веганов."
+          </p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <img class="avatar" src="https://i.pravatar.cc/100?img=15" alt="Максим Петров">
+
+            <div>
+              <div class="review-name">Максим Петров</div>
+              <div class="review-meta">
+                <span class="stars">☆☆☆☆☆</span>
+                <span>15 января 2023</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="review-text">
+            "Зарегистрировался, чтобы сохранять рецепты. Интерфейс удобный, ничего лишнего.
+            Спасибо разработчикам за такой полезный проект."
+          </p>
+        </div>
+      </div>
+
+      <a href="#" class="more-btn">Оставить свой отзыв</a>
+    </div>
+  </main>
+</body>
+</html>

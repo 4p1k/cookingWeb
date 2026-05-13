@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Все рецепты — Вкусные Истории</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f2ed;
+      color: #47352c;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #ede2d7;
+    }
+
+    .header-inner {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: #b16740;
+    }
+
+    .logo span {
+      color: #5d7764;
+    }
+
+    nav {
+      display: flex;
+      gap: 46px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #382b24;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+      font-size: 24px;
+    }
+
+    main {
+      padding: 48px 0 70px;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 42px;
+    }
+
+    .page-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 68px;
+      font-weight: 600;
+      color: #47352c;
+      margin-bottom: 10px;
+    }
+
+    .page-subtitle {
+      font-size: 22px;
+      color: #988376;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+    }
+
+    .search-box,
+    .filter-btn {
+      height: 50px;
+      border: 1px solid #e4d5ca;
+      border-radius: 16px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      padding: 0 18px;
+      color: #9a8679;
+      font-size: 16px;
+    }
+
+    .search-box {
+      width: 250px;
+      gap: 10px;
+    }
+
+    .filter-btn {
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .recipes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .recipe-card {
+      background: #fff;
+      border: 1px solid #e5d6ca;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(71, 53, 44, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .recipe-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .recipe-image {
+      position: relative;
+      height: 210px;
+      overflow: hidden;
+    }
+
+    .recipe-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: #ff7a1a;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 999px;
+    }
+
+    .recipe-content {
+      padding: 24px;
+    }
+
+    .recipe-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #45332b;
+    }
+
+    .recipe-description {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #938074;
+      min-height: 76px;
+      margin-bottom: 22px;
+    }
+
+    .recipe-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #eee1d6;
+      margin-bottom: 18px;
+      font-size: 15px;
+      color: #8f7a6d;
+    }
+
+    .time {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .difficulty {
+      background: #fff1e6;
+      color: #d46d1d;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .recipe-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #b06740;
+      font-size: 18px;
+      font-weight: 500;
+      transition: 0.2s ease;
+    }
+
+    .recipe-link:hover {
+      gap: 12px;
+    }
+
+    .load-more {
+      display: block;
+      width: fit-content;
+      margin: 70px auto 0;
+      padding: 16px 36px;
+      border: 2px solid #b06740;
+      border-radius: 18px;
+      color: #b06740;
+      font-size: 18px;
+      font-weight: 500;
+      transition: 0.2s ease;
+      background: transparent;
+    }
+
+    .load-more:hover {
+      background: #b06740;
+      color: #fff;
+    }
+
+    @media (max-width: 1100px) {
+      .recipes-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .header-inner {
+        flex-direction: column;
+        justify-content: center;
+        gap: 14px;
+        height: auto;
+        padding: 18px 0;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+      }
+
+      .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .page-title {
+        font-size: 46px;
+      }
+
+      .page-subtitle {
+        font-size: 18px;
+      }
+
+      .actions {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .search-box,
+      .filter-btn {
+        width: 100%;
+      }
+
+      .recipes-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="logo">
+            <a href="#">🍳 Вкусные<span>Истории</span></a>
+
+      </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="recipes.html">Рецепты</a></li>
+                    <li><a href="#">Категории</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+      <div class="header-icons">
+        <span>⌕</span>
+        <span>◌</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="top-bar">
+        <div>
+          <h1 class="page-title">Все рецепты</h1>
+          <p class="page-subtitle">Свежие идеи для вашего стола каждый день</p>
+        </div>
+
+        <div class="actions">
+          <div class="search-box">⌕ Поиск рецептов...</div>
+          <div class="filter-btn">⚲ Фильтры</div>
+        </div>
+      </div>
+
+      <div class="recipes-grid">
+        <article class="recipe-card">
+          <div class="recipe-image">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1200&auto=format&fit=crop" alt="Салат с киноа и авокадо">
+            <div class="badge">Новинка</div>
+          </div>
+
+          <div class="recipe-content">
+            <h2 class="recipe-title">Салат с киноа и авокадо</h2>
+
+            <p class="recipe-description">
+              Лёгкий и полезный салат с киноа, авокадо и свежими овощами.
+            </p>
+
+            <div class="recipe-meta">
+              <div class="time">🕒 25 мин</div>
+              <div class="difficulty">легко</div>
+            </div>
+
+            <a href="#" class="recipe-link">Смотреть рецепт →</a>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-image">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop" alt="Пицца Маргарита">
+          </div>
+
+          <div class="recipe-content">
+            <h2 class="recipe-title">Пицца Маргарита</h2>
+
+            <p class="recipe-description">
+              Классическая итальянская пицца с соусом, моцареллой и базиликом.
+            </p>
+
+            <div class="recipe-meta">
+              <div class="time">🕒 40 мин</div>
+              <div class="difficulty">средне</div>
+            </div>
+
+            <a href="#" class="recipe-link">Смотреть рецепт →</a>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-image">
+            <img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?q=80&w=1200&auto=format&fit=crop" alt="Паста Карбонара">
+            <div class="badge">🔥 Горячее</div>
+          </div>
+
+          <div class="recipe-content">
+            <h2 class="recipe-title">Паста Карбонара</h2>
+
+            <p class="recipe-description">
+              Спагетти с беконом в нежном сливочно-яичном соусе.
+            </p>
+
+            <div class="recipe-meta">
+              <div class="time">🕒 30 мин</div>
+              <div class="difficulty">средне</div>
+            </div>
+
+            <a href="#" class="recipe-link">Смотреть рецепт →</a>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-image">
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=1200&auto=format&fit=crop" alt="Шоколадный брауни">
+          </div>
+
+          <div class="recipe-content">
+            <h2 class="recipe-title">Шоколадный брауни</h2>
+
+            <p class="recipe-description">
+              Американский десерт с хрустящей корочкой и влажной серединкой.
+            </p>
+
+            <div class="recipe-meta">
+              <div class="time">🕒 45 мин</div>
+              <div class="difficulty">сложно</div>
+            </div>
+
+            <a href="#" class="recipe-link">Смотреть рецепт →</a>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-image">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1200&auto=format&fit=crop" alt="Тыквенный суп-пюре">
+          </div>
+
+          <div class="recipe-content">
+            <h2 class="recipe-title">Тыквенный суп-пюре</h2>
+
+            <p class="recipe-description">
+              Нежный крем-суп из тыквы с имбирём и сливками.
+            </p>
+
+            <div class="recipe-meta">
+              <div class="time">🕒 35 мин</div>
+              <div class="difficulty">сложно</div>
+            </div>
+
+            <a href="#" class="recipe-link">Смотреть рецепт →</a>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-image">
+            <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=1200&auto=format&fit=crop" alt="Стейк из лосося">
+            <div class="badge">🔥 Горячее</div>
+          </div>
+
+          <div class="recipe-content">
+            <h2 class="recipe-title">Стейк из лосося</h2>
+
+            <p class="recipe-description">
+              Запечённый стейк из лосося с лимоном и розмарином.
+            </p>
+
+            <div class="recipe-meta">
+              <div class="time">🕒 20 мин</div>
+              <div class="difficulty">средне</div>
+            </div>
+
+            <a href="#" class="recipe-link">Смотреть рецепт →</a>
+          </div>
+        </article>
+      </div>
+
+      <button class="load-more">Загрузить ещё</button>
+    </div>
+  </main>
+</body>
+</html>
