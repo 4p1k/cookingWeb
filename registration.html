@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/dark-theme.css">
   <style>
     * {
       margin: 0;
@@ -298,7 +299,7 @@
   <header>
     <div class="container header-inner">
       <div class="logo">
-            <a href="#">🍳 Вкусные<span>Истории</span></a>
+            <a href="index.html">🍳 Вкусные<span>Истории</span></a>
 
       </div>
             <nav class="nav">
@@ -311,10 +312,10 @@
                 </ul>
             </nav>
 
-      <div class="header-icons">
-        <span>⌕</span>
-        <span>◌</span>
-      </div>
+        <div class="header-icons">
+            <a href="#" class="search-icon">🔍</a>
+            <a href="registration.html" class="user-icon">👤</a>
+        </div>
     </div>
   </header>
 
@@ -363,17 +364,17 @@
         <form>
           <div class="form-group">
             <label>Желаемый логин</label>
-            <input type="text" class="form-control" placeholder="Например, chef_maria">
+            <input type="text" id="login" class="form-control" placeholder="Например, chef_maria" required>
           </div>
 
           <div class="form-group">
             <label>Электронная почта</label>
-            <input type="email" class="form-control" placeholder="mail@example.com">
+            <input type="email" id="email" class="form-control" placeholder="mail@example.com" required>
           </div>
 
           <div class="form-group">
             <label>Пароль</label>
-            <input type="password" class="form-control" placeholder="Создайте надежный пароль">
+            <input type="password" class="form-control" id="password" placeholder="Создайте надежный пароль" required>
           </div>
 
           <button type="submit" class="submit-btn">
@@ -388,5 +389,6 @@
       </div>
     </section>
   </main>
+  <script src="assets/script.js"></script>
 </body>
 </html>
